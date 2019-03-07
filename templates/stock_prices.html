@@ -1,0 +1,65 @@
+<style>
+
+.serif {
+  font-family: Menlo, sans-serif, monospace;
+}
+
+.center_vert {
+  margin: 0;
+  position: absolute;
+  top: 15%;
+  left: 5%;
+}
+
+.dropdown {
+  width:150px;
+  height:200px
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+input[type=submit] {
+  background-color: #998877;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+input[type=submit]:hover {
+  background-color: #778899;
+  color: white;
+  border-radius: 5px;
+}
+
+</style>
+
+<head>
+  <meta charset="UTF-8">
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+</head>
+
+<div class="center_vert serif">
+<body>
+  <h1>This is a graph of the historic prices for the stocks in your porfolio</h1>
+  <div class="chart" id="scatter">
+      <script>
+          var graphs = {{plot | safe}};
+          Plotly.plot('scatter',graphs,{});
+      </script>
+  </div>
+</body>
+<br>
+<br>
+<br>
+<form class="" action="/" method = get>
+  <input type="submit" name="ret_home" value="Back to Home Page">
+</form>

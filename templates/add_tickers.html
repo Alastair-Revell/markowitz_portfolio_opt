@@ -1,0 +1,46 @@
+<style>
+
+.serif {
+  font-family: Menlo, sans-serif, monospace;
+}
+
+.center_vert {
+  margin: 0;
+  position: absolute;
+  top: 15%;
+  left: 5%;
+}
+
+.dropdown {
+  width:150px;
+  height:200px
+}
+
+</style>
+
+<div class="center_vert serif"
+  <h4>Please choose your stocks for the portfolio:</h4>
+  <br>
+  <br>
+  <form action="/add_tickers" method="post">
+    <select name="stocks" multiple>
+      <option value="AMD">Advanced Micro Devices</option>
+      <option value="GOOG">Google</option>
+      <option value="JPM">J.P. Morgan</option>
+      <option value="AAPL">Apple</option>
+      <option value="T">AT&T</option>
+      <option value="MSFT">Microsoft</option>
+      <option value="FB">Facebook</option>
+      <option value="AMZN">Amazon</option>
+      <option value="BABA">Alibaba</option>
+      <option value="V">Visa</option>
+      <option value="BAC">Bank of America Corp</option>
+      <option value="WMT">Walmart</option>
+      <option value="PFE">Pfizer</option>
+      <option value="BA">Boeing Co</option>
+      <option value="PG">Procter & Gamble Co</option>
+    </select>
+    <input type="submit" value="Submit">
+  </form>
+
+<!-- add on-click pop-up before redirect to the homepage  -->
